@@ -6,21 +6,17 @@ import helmet from "helmet"
 
 import cors from "cors"
 
+import path from "path"
+
 dotenv.config()
 
 const app = express()
 
-app.use(cors())
-app.use(helmet())
 app.use(express.json())
 
-app.use(express.static("build"))
+app.use(express.static(path.resolve("build")))
 
 const PORT = process.env[`PORT`]
-
-app.get("/teste", (_req, res) => {
-    res.send("Teste")
-})
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)

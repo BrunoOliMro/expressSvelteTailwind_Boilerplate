@@ -9,8 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         landing: path.resolve(__dirname, "index.html"),
+        login: path.resolve(__dirname, "login/index.html")
       },
+      outDir: "./build"
     },
-    outDir: "./build/"
   }
 })
