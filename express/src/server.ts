@@ -2,10 +2,6 @@ import express from "express"
 
 import dotenv from "dotenv"
 
-import helmet from "helmet"
-
-import cors from "cors"
-
 import path from "path"
 
 dotenv.config()
@@ -14,7 +10,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use(express.static(path.resolve("build")))
+app.use(express.static(path.resolve("dist")))
 
 const PORT = process.env[`PORT`]
 

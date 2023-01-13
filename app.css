@@ -513,11 +513,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-green-200 {
-  --tw-text-opacity: 1;
-  color: rgb(187 247 208 / var(--tw-text-opacity));
-}
-
 * {
   margin: 0;
   padding: 0;
